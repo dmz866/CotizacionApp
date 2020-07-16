@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "n3j6l9WxfY1i5wQLlHS+VqUN6lMnCEB4XyiqJuaDaZXOf3nyFkuE27C2pUKQr+a06Xq9U2QHB0bZdiGMkdWN2Q==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\David\\source\\repos\\Cotizacion\\Server\\CotizacionApp\\Cotizacion.Core\\CotizacionApp.Core.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\David\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.2\\microsoft.aspnetcore.app.ref.3.1.2.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,6 +1,5 @@
 ﻿using CotizacionApp.Core.Entities;
 using CotizacionApp.Core.Interfaces;
-using CotizacionCore.Entities;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Threading.Tasks;
@@ -18,8 +17,15 @@ namespace CotizacionApp.Controllers
         [Route("/api/cotizacion")]
         public async Task<Response<Cotizacion>> GetCotizacion(string moneda)
         {
-            Response<Cotizacion> cotizacion = await _cotizacionService.GetCotizacion(moneda);
-            return cotizacion;
+            Response<Cotizacion> result = await _cotizacionService.GetCotizacion(moneda);
+            return result;
+        }
+        [HttpPost]
+        [Route("/api/compra")]
+        public async Task<Response<Transaccion>> ComprarMoneda(Transaccion transaccion)
+        {
+            Response<Transaccion> result = await _cotizacionService.ComprarMoneda(transaccion);
+            return result;
         }
     }
 }

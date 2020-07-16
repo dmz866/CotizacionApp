@@ -1,0 +1,4 @@
+C:\Users\David\source\repos\Cotizacion\Server\CotizacionApp\Cotizacion.Core\obj\Debug\netcoreapp3.1\Cotizacion.Core.csprojAssemblyReference.cache
+C:\Users\David\source\repos\Cotizacion\Server\CotizacionApp\Cotizacion.Core\obj\Debug\netcoreapp3.1\Cotizacion.Core.AssemblyInfoInputs.cache
+C:\Users\David\source\repos\Cotizacion\Server\CotizacionApp\Cotizacion.Core\obj\Debug\netcoreapp3.1\Cotizacion.Core.AssemblyInfo.cs
+C:\Users\David\source\repos\Cotizacion\Server\CotizacionApp\Cotizacion.Core\obj\Debug\netcoreapp3.1\Cotizacion.Core.csproj.CoreCompileInputs.cache

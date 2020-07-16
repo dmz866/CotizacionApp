@@ -1,9 +1,0 @@
-C:\Users\David\source\repos\CotizacionApp\CotizacionCore\bin\Debug\netstandard2.0\CotizacionCore.deps.json
-C:\Users\David\source\repos\CotizacionApp\CotizacionCore\bin\Debug\netstandard2.0\CotizacionCore.dll
-C:\Users\David\source\repos\CotizacionApp\CotizacionCore\bin\Debug\netstandard2.0\CotizacionCore.pdb
-C:\Users\David\source\repos\CotizacionApp\CotizacionCore\obj\Debug\netstandard2.0\CotizacionCore.csprojAssemblyReference.cache
-C:\Users\David\source\repos\CotizacionApp\CotizacionCore\obj\Debug\netstandard2.0\CotizacionCore.AssemblyInfoInputs.cache
-C:\Users\David\source\repos\CotizacionApp\CotizacionCore\obj\Debug\netstandard2.0\CotizacionCore.AssemblyInfo.cs
-C:\Users\David\source\repos\CotizacionApp\CotizacionCore\obj\Debug\netstandard2.0\CotizacionCore.csproj.CoreCompileInputs.cache
-C:\Users\David\source\repos\CotizacionApp\CotizacionCore\obj\Debug\netstandard2.0\CotizacionCore.dll
-C:\Users\David\source\repos\CotizacionApp\CotizacionCore\obj\Debug\netstandard2.0\CotizacionCore.pdb
