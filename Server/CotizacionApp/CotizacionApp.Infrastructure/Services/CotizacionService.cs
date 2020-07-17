@@ -5,23 +5,28 @@ using CotizacionApp.Infrastructure.Data;
 using System;
 using System.Net.Http;
 using System.Threading.Tasks;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace CotizacionApp.Infrastructure.Services
 {
     public class CotizacionService : ICotizacionService
     {
         private readonly CotizacionAppContext _context;
+        private readonly IUtilsService _utilsService;
         private HttpClient _client;
-        public CotizacionService(CotizacionAppContext context)
+        public CotizacionService(CotizacionAppContext context, IUtilsService utilsService)
         {
             _context = context;
+            _utilsService = utilsService;
             _client = new HttpClient();
         }
         public async Task<Response<Cotizacion>> GetCotizacion(string moneda)
         {
             try
             {
-                if(string.IsNullOrEmpty(moneda) || !Constants.MONEDAS_ACEPTADAS_LIST.Contains(moneda.ToLower()))
+                var monedasAceptadasList = await _utilsService.GetMonedasAceptadas();
+                if (string.IsNullOrEmpty(moneda) || !monedasAceptadasList.Any(m => m.Value.Equals(moneda.ToLower())))
                 {
                     throw new Exception(Constants.MONEDA_NO_ACEPTADA);
                 }
@@ -59,6 +64,22 @@ namespace CotizacionApp.Infrastructure.Services
         {
             try
             {
+                var monedasAceptadasList = await _utilsService.GetMonedasAceptadas();
+                if (string.IsNullOrEmpty(transaccion.Moneda) || !monedasAceptadasList.Any(m => m.Value.Equals(transaccion.Moneda.ToLower())))
+                {
+                    throw new Exception(Constants.MONEDA_NO_ACEPTADA);
+                }
+
+                if (transaccion.Moneda.Equals(Constants.MONEDA_DOLAR) && transaccion.Monto > 200)
+                {
+                    throw new Exception(Constants.MENSAJE_LIMITE_DOLAR);
+                }
+
+                if (transaccion.Moneda.Equals(Constants.MONEDA_REAL) && transaccion.Monto > 300)
+                {
+                    throw new Exception(Constants.MENSAJE_LIMITE_REAL);
+                }
+
                 _context.Transacciones.Add(transaccion);
                 await _context.SaveChangesAsync();
 

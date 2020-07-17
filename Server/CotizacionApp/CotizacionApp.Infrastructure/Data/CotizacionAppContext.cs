@@ -12,5 +12,6 @@ namespace CotizacionApp.Infrastructure.Data
         {
         }
         public virtual DbSet<Transaccion> Transacciones { get; set; }
+        public virtual DbSet<LookUp> LookUp { get; set; }
     }
 }

@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace CotizacionApp.Controllers
 {
+    [ApiController]
+    [Route("/api/[controller]")]
     public class CotizacionController : Controller
     {
         private readonly ICotizacionService _cotizacionService;
@@ -14,15 +16,15 @@ namespace CotizacionApp.Controllers
             _cotizacionService  = cotizacionService;
         }
         [HttpGet]
-        [Route("/api/cotizacion")]
+        [Route("GetCotizacion")]
         public async Task<Response<Cotizacion>> GetCotizacion(string moneda)
         {
             Response<Cotizacion> result = await _cotizacionService.GetCotizacion(moneda);
             return result;
         }
         [HttpPost]
-        [Route("/api/compra")]
-        public async Task<Response<Transaccion>> ComprarMoneda(Transaccion transaccion)
+        [Route("ComprarMoneda")]
+        public async Task<Response<Transaccion>> ComprarMoneda([FromBody] Transaccion transaccion)
         {
             Response<Transaccion> result = await _cotizacionService.ComprarMoneda(transaccion);
             return result;

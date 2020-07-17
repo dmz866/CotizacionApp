@@ -1,10 +1,12 @@
 using CotizacionApp.Core.Interfaces;
 using CotizacionApp.Infrastructure.Services;
+using CotizacionApp.Infrastructure.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.EntityFrameworkCore;
 
 namespace CotizacionApp
 {
@@ -22,6 +24,8 @@ namespace CotizacionApp
         {
             services.AddControllers();
             services.AddTransient<ICotizacionService, CotizacionService>();
+            services.AddTransient<IUtilsService, UtilsService>();
+            services.AddDbContext<CotizacionAppContext>(options => options.UseSqlServer(Configuration.GetConnectionString("CotizacionApp")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -1,7 +1,3 @@
-C:\Users\David\source\repos\Cotizacion\Server\CotizacionApp\CotizacionApp.Infrastructure\obj\Debug\netcoreapp3.1\CotizacionApp.Infrastructure.AssemblyInfoInputs.cache
-C:\Users\David\source\repos\Cotizacion\Server\CotizacionApp\CotizacionApp.Infrastructure\obj\Debug\netcoreapp3.1\CotizacionApp.Infrastructure.AssemblyInfo.cs
-C:\Users\David\source\repos\Cotizacion\Server\CotizacionApp\CotizacionApp.Infrastructure\obj\Debug\netcoreapp3.1\CotizacionApp.Infrastructure.csproj.CoreCompileInputs.cache
-C:\Users\David\source\repos\Cotizacion\Server\CotizacionApp\CotizacionApp.Infrastructure\obj\Debug\netcoreapp3.1\CotizacionApp.Infrastructure.csprojAssemblyReference.cache
 C:\Users\David\source\repos\Cotizacion\Server\CotizacionApp\CotizacionApp.Infrastructure\bin\Debug\netcoreapp3.1\CotizacionApp.Infrastructure.deps.json
 C:\Users\David\source\repos\Cotizacion\Server\CotizacionApp\CotizacionApp.Infrastructure\bin\Debug\netcoreapp3.1\CotizacionApp.Infrastructure.runtimeconfig.json
 C:\Users\David\source\repos\Cotizacion\Server\CotizacionApp\CotizacionApp.Infrastructure\bin\Debug\netcoreapp3.1\CotizacionApp.Infrastructure.runtimeconfig.dev.json
@@ -9,6 +5,10 @@ C:\Users\David\source\repos\Cotizacion\Server\CotizacionApp\CotizacionApp.Infras
 C:\Users\David\source\repos\Cotizacion\Server\CotizacionApp\CotizacionApp.Infrastructure\bin\Debug\netcoreapp3.1\CotizacionApp.Infrastructure.pdb
 C:\Users\David\source\repos\Cotizacion\Server\CotizacionApp\CotizacionApp.Infrastructure\bin\Debug\netcoreapp3.1\CotizacionApp.Core.dll
 C:\Users\David\source\repos\Cotizacion\Server\CotizacionApp\CotizacionApp.Infrastructure\bin\Debug\netcoreapp3.1\CotizacionApp.Core.pdb
+C:\Users\David\source\repos\Cotizacion\Server\CotizacionApp\CotizacionApp.Infrastructure\obj\Debug\netcoreapp3.1\CotizacionApp.Infrastructure.csprojAssemblyReference.cache
+C:\Users\David\source\repos\Cotizacion\Server\CotizacionApp\CotizacionApp.Infrastructure\obj\Debug\netcoreapp3.1\CotizacionApp.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\David\source\repos\Cotizacion\Server\CotizacionApp\CotizacionApp.Infrastructure\obj\Debug\netcoreapp3.1\CotizacionApp.Infrastructure.AssemblyInfo.cs
+C:\Users\David\source\repos\Cotizacion\Server\CotizacionApp\CotizacionApp.Infrastructure\obj\Debug\netcoreapp3.1\CotizacionApp.Infrastructure.csproj.CoreCompileInputs.cache
 C:\Users\David\source\repos\Cotizacion\Server\CotizacionApp\CotizacionApp.Infrastructure\obj\Debug\netcoreapp3.1\CotizacionApp.Infrastructure.csproj.CopyComplete
 C:\Users\David\source\repos\Cotizacion\Server\CotizacionApp\CotizacionApp.Infrastructure\obj\Debug\netcoreapp3.1\CotizacionApp.Infrastructure.dll
 C:\Users\David\source\repos\Cotizacion\Server\CotizacionApp\CotizacionApp.Infrastructure\obj\Debug\netcoreapp3.1\CotizacionApp.Infrastructure.pdb
