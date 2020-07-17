@@ -11,7 +11,7 @@ namespace CotizacionApp.Infrastructure.Data
         public CotizacionAppContext(DbContextOptions<CotizacionAppContext> options) : base(options)
         {
         }
-        public virtual DbSet<Transaccion> Transacciones { get; set; }
+        public virtual DbSet<Transaccion> Transaccion { get; set; }
         public virtual DbSet<LookUp> LookUp { get; set; }
     }
 }

@@ -12,6 +12,7 @@ export class CompraComponent implements OnInit {
   transaccion: Transaccion = new Transaccion();
   message: string;
   errorMessage: string;
+  loading: boolean = false;
   constructor(private cotizacionService: CotizacionService) { }
 
   ngOnInit() {
@@ -23,13 +24,23 @@ export class CompraComponent implements OnInit {
       return;
     }
 
+    this.transaccion.createdBy = this.transaccion.usuarioId;
+    this.transaccion.updatedBy = this.transaccion.usuarioId;
+    this.transaccion.createdOn = new Date();
+    this.transaccion.updatedOn = new Date();
+    this.loading = true;
+
     this.cotizacionService.comprar(this.transaccion).subscribe((result: Response) => {
       if (result.success) {
         this.transaccion = new Transaccion();
+        this.errorMessage = null;
         this.message = result.message;
+        this.loading = false;
       }
       else {
+        this.message = null;
         this.errorMessage = result.message;
+        this.loading = false;
       }
     });
   }

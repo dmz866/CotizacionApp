@@ -70,7 +70,7 @@ namespace CotizacionApp.Infrastructure.Services
                     throw new Exception(Constants.MONEDA_NO_ACEPTADA);
                 }
 
-                var montoActual = _context.Transacciones
+                var montoActual = _context.Transaccion
                                         .Where(t => t.UsuarioId.Equals(transaccion.UsuarioId) && 
                                         t.CreatedOn.Month.Equals(DateTime.Now.Month) &&
                                         t.Moneda.Equals(transaccion.Moneda))
@@ -87,13 +87,14 @@ namespace CotizacionApp.Infrastructure.Services
                     throw new Exception(Constants.MENSAJE_LIMITE_REAL);
                 }
 
-                _context.Transacciones.Add(transaccion);
+                _context.Transaccion.Add(transaccion);
                 await _context.SaveChangesAsync();
 
                 return new Response<Transaccion>()
                 {
                     Success = true,
-                    Data = transaccion
+                    Data = transaccion,
+                    Message = Constants.MENSAJE_SUCCESS
                 };
             }
             catch (Exception ex)

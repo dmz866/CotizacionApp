@@ -1,14 +1,17 @@
 <h1>Cotizacion</h1>
+<div *ngIf="errorMessage" class="alert alert-danger" role="alert">
+  {{errorMessage}}
+</div>
+<div class="spinner-border" role="status" *ngIf="loading">
+  <span class="sr-only">Cargando...</span>
+</div>
 <div>
   <label>Moneda</label>
   <input type="text" placeholder="Dolar/Real" [(ngModel)]="moneda" />
-  <button (click)="getCotizaciones()">Cotizar</button>
+  <button [disabled]="!moneda" (click)="getCotizaciones()">Cotizar</button>
 </div>
 <div *ngIf="cotizacion">
   <div>Compra: {{cotizacion.compra}}</div>
   <div>Venta: {{cotizacion.venta}}</div>
   <div>Mensaje: {{cotizacion.mensaje}}</div>
-</div>
-<div *ngIf="errorMessage">
-  {{errorMessage}}
 </div>

@@ -6,6 +6,7 @@ import { CotizacionesComponent } from './components/cotizaciones/cotizaciones.co
 const routes: Routes = [
   { path: 'cotizaciones', component: CotizacionesComponent },
   { path: 'compra', component: CompraComponent },
+  { path: '**', pathMatch: 'full', redirectTo: 'cotizaciones' }
 ];
 
 @NgModule({
