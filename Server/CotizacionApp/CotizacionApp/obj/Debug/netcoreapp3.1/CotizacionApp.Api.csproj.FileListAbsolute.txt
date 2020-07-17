@@ -1,8 +1,6 @@
 C:\Users\David\source\repos\Cotizacion\Server\CotizacionApp\CotizacionApp\obj\Debug\netcoreapp3.1\CotizacionApp.Api.csprojAssemblyReference.cache
 C:\Users\David\source\repos\Cotizacion\Server\CotizacionApp\CotizacionApp\obj\Debug\netcoreapp3.1\CotizacionApp.Api.AssemblyInfoInputs.cache
 C:\Users\David\source\repos\Cotizacion\Server\CotizacionApp\CotizacionApp\obj\Debug\netcoreapp3.1\CotizacionApp.Api.AssemblyInfo.cs
-C:\Users\David\source\repos\Cotizacion\Server\CotizacionApp\CotizacionApp\obj\Debug\netcoreapp3.1\CotizacionApp.Api.csproj.CoreCompileInputs.cache
-C:\Users\David\source\repos\Cotizacion\Server\CotizacionApp\CotizacionApp\obj\Debug\netcoreapp3.1\CotizacionApp.Api.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\David\source\repos\Cotizacion\Server\CotizacionApp\CotizacionApp\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\Users\David\source\repos\Cotizacion\Server\CotizacionApp\CotizacionApp\bin\Debug\netcoreapp3.1\appsettings.json
 C:\Users\David\source\repos\Cotizacion\Server\CotizacionApp\CotizacionApp\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
@@ -62,3 +60,8 @@ C:\Users\David\source\repos\Cotizacion\Server\CotizacionApp\CotizacionApp\obj\De
 C:\Users\David\source\repos\Cotizacion\Server\CotizacionApp\CotizacionApp\obj\Debug\netcoreapp3.1\CotizacionApp.Api.dll
 C:\Users\David\source\repos\Cotizacion\Server\CotizacionApp\CotizacionApp\obj\Debug\netcoreapp3.1\CotizacionApp.Api.pdb
 C:\Users\David\source\repos\Cotizacion\Server\CotizacionApp\CotizacionApp\obj\Debug\netcoreapp3.1\CotizacionApp.Api.genruntimeconfig.cache
+C:\Users\David\source\repos\Cotizacion\Server\CotizacionApp\CotizacionApp\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\David\source\repos\Cotizacion\Server\CotizacionApp\CotizacionApp\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\David\source\repos\Cotizacion\Server\CotizacionApp\CotizacionApp\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
+C:\Users\David\source\repos\Cotizacion\Server\CotizacionApp\CotizacionApp\obj\Debug\netcoreapp3.1\CotizacionApp.Api.csproj.CoreCompileInputs.cache
+C:\Users\David\source\repos\Cotizacion\Server\CotizacionApp\CotizacionApp\obj\Debug\netcoreapp3.1\CotizacionApp.Api.MvcApplicationPartsAssemblyInfo.cache

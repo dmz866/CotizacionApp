@@ -7,7 +7,6 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
-
 namespace CotizacionApp
 {
     public class Startup
@@ -22,10 +21,14 @@ namespace CotizacionApp
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
+            services.AddControllers().AddNewtonsoftJson();
             services.AddTransient<ICotizacionService, CotizacionService>();
             services.AddTransient<IUtilsService, UtilsService>();
             services.AddDbContext<CotizacionAppContext>(options => options.UseSqlServer(Configuration.GetConnectionString("CotizacionApp")));
+            services.AddCors(options => options.AddPolicy("ApiCorsPolicy", builder =>
+            {
+                builder.WithOrigins("http://localhost:4200").AllowAnyMethod().AllowAnyHeader();
+            }));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -35,6 +38,8 @@ namespace CotizacionApp
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseCors("ApiCorsPolicy");
 
             app.UseHttpsRedirection();
 

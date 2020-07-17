@@ -70,12 +70,19 @@ namespace CotizacionApp.Infrastructure.Services
                     throw new Exception(Constants.MONEDA_NO_ACEPTADA);
                 }
 
-                if (transaccion.Moneda.Equals(Constants.MONEDA_DOLAR) && transaccion.Monto > 200)
+                var montoActual = _context.Transacciones
+                                        .Where(t => t.UsuarioId.Equals(transaccion.UsuarioId) && 
+                                        t.CreatedOn.Month.Equals(DateTime.Now.Month) &&
+                                        t.Moneda.Equals(transaccion.Moneda))
+                                        .Sum(t => t.Monto);
+                montoActual += transaccion.Monto;
+
+                if (transaccion.Moneda.Equals(Constants.MONEDA_DOLAR) && montoActual > 200)
                 {
                     throw new Exception(Constants.MENSAJE_LIMITE_DOLAR);
                 }
 
-                if (transaccion.Moneda.Equals(Constants.MONEDA_REAL) && transaccion.Monto > 300)
+                if (transaccion.Moneda.Equals(Constants.MONEDA_REAL) && montoActual > 300)
                 {
                     throw new Exception(Constants.MENSAJE_LIMITE_REAL);
                 }

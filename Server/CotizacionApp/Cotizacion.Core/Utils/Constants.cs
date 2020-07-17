@@ -12,7 +12,7 @@ namespace CotizacionApp.Core.Utils
         
         // EXCEPTION MESSAGES
         public static readonly string MONEDA_NO_ACEPTADA = "Moneda no valida";
-        public static readonly string MENSAJE_LIMITE_DOLAR = "El monto limite es 200";
-        public static readonly string MENSAJE_LIMITE_REAL = "El monto limite es 300";
+        public static readonly string MENSAJE_LIMITE_DOLAR = "El monto limite por mes es 200";
+        public static readonly string MENSAJE_LIMITE_REAL = "El monto limite por mes es 300";
     }
 }
