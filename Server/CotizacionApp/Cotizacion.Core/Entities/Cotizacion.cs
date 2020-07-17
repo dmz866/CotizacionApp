@@ -2,8 +2,8 @@
 {
     public class Cotizacion
     {
-        public double Compra { get; set; }
-        public double Venta { get; set; }
+        public decimal Compra { get; set; }
+        public decimal Venta { get; set; }
         public string Mensaje { get; set; }
     }
 }

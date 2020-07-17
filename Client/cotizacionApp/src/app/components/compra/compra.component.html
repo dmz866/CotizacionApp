@@ -1,16 +1,16 @@
 <app-cotizaciones></app-cotizaciones>
 <hr>
 <h1>Compra</h1>
+<div *ngIf="message" class="alert alert-success" role="alert">
+  {{message}}
+</div>
+<div *ngIf="errorMessage" class="alert alert-danger" role="alert">
+  {{errorMessage}}
+</div>
 <div class="row">
-  <div class="col-md-12">
+  <div class="col-md-6">
     <div class="spinner-border" role="status" *ngIf="loading">
       <span class="sr-only">Cargando...</span>
-    </div>
-    <div *ngIf="message" class="alert alert-success" role="alert">
-      {{message}}
-    </div>
-    <div *ngIf="errorMessage" class="alert alert-danger" role="alert">
-      {{errorMessage}}
     </div>
     <div class="form-group">
       <label>Usuario ID</label>
@@ -25,5 +25,21 @@
       <input type="number" placeholder="1000" [(ngModel)]="transaccion.monto" />
     </div>
     <button (click)="comprar()">Comprar</button>
+  </div>
+  <div class="col-md-6">
+    <div *ngIf="transaccionRealizada">
+      <div class="form-group">
+        Transaccion ID: {{transaccionRealizada.id}}
+      </div>
+      <div class="form-group">
+        Usuario ID: {{transaccionRealizada.usuarioId}}
+      </div>
+      <div class="form-group">
+        Moneda: {{transaccionRealizada.moneda}}
+      </div>
+      <div class="form-group">
+        Monto: {{transaccionRealizada.monto}}
+      </div>
+    </div>
   </div>
 </div>

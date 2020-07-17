@@ -21,6 +21,13 @@ namespace CotizacionApp.Infrastructure.Services
             _utilsService = utilsService;
             _client = new HttpClient();
         }
+        /*
+         ¿Qué opina de pasar el id de usuario como input del endpoint? ¿Cómo mejoraría la
+        transacción para asegurarnos de que el usuario que pidió la compra es quien dice ser? 
+
+        Para asegurarnos que el id del usuario sea el correcto, el usuario deberia autenticarse primero y podriamos 
+        utilizar un token para asegurar la creacion de la transaccion
+        */
         public async Task<Response<Cotizacion>> GetCotizacion(string moneda)
         {
             try
@@ -35,14 +42,14 @@ namespace CotizacionApp.Infrastructure.Services
                 var content = response.Content.ReadAsStringAsync().Result;
                 string[] result = content.Replace('[', ' ').Replace(']', ' ').Replace('"', ' ').Split(',');
                 Cotizacion cotizacion = new Cotizacion();
-                cotizacion.Compra = Convert.ToDouble(result[0]);
-                cotizacion.Venta = Convert.ToDouble(result[1]);
+                cotizacion.Compra = Convert.ToDecimal(result[0]);
+                cotizacion.Venta = Convert.ToDecimal(result[1]);
                 cotizacion.Mensaje = result[2];
 
                 if(moneda.Equals(Constants.MONEDA_REAL))
                 {
-                    cotizacion.Compra = cotizacion.Compra * Constants.COTIZACION_REAL_DOLAR;
-                    cotizacion.Venta = cotizacion.Venta * Constants.COTIZACION_REAL_DOLAR;
+                    cotizacion.Compra *= Constants.COTIZACION_REAL_DOLAR;
+                    cotizacion.Venta *= Constants.COTIZACION_REAL_DOLAR;
                 }
 
                 return new Response<Cotizacion>()
@@ -65,17 +72,20 @@ namespace CotizacionApp.Infrastructure.Services
             try
             {
                 var monedasAceptadasList = await _utilsService.GetMonedasAceptadas();
+                
                 if (string.IsNullOrEmpty(transaccion.Moneda) || !monedasAceptadasList.Any(m => m.Value.Equals(transaccion.Moneda.ToLower())))
                 {
                     throw new Exception(Constants.MONEDA_NO_ACEPTADA);
                 }
 
+                var cotizacion = await GetCotizacion(transaccion.Moneda);
                 var montoActual = _context.Transaccion
                                         .Where(t => t.UsuarioId.Equals(transaccion.UsuarioId) && 
                                         t.CreatedOn.Month.Equals(DateTime.Now.Month) &&
                                         t.Moneda.Equals(transaccion.Moneda))
                                         .Sum(t => t.Monto);
                 montoActual += transaccion.Monto;
+                montoActual /= cotizacion.Data.Compra;
 
                 if (transaccion.Moneda.Equals(Constants.MONEDA_DOLAR) && montoActual > 200)
                 {

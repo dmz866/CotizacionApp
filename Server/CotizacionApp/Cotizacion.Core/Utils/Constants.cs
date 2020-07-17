@@ -8,7 +8,7 @@ namespace CotizacionApp.Core.Utils
         public static readonly string MONEDA_DOLAR = "dolar";
         public static readonly string MONEDA_REAL = "real";
         public static readonly string MONEDA_GROUP = "moneda";
-        public static readonly double COTIZACION_REAL_DOLAR = 0.25; 
+        public static readonly decimal COTIZACION_REAL_DOLAR = 0.25M; 
         
         // EXCEPTION MESSAGES
         public static readonly string MONEDA_NO_ACEPTADA = "Moneda no valida";

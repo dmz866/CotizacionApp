@@ -8,5 +8,4 @@ C:\Users\David\source\repos\Cotizacion\Server\CotizacionApp\Cotizacion.Core\obj\
 C:\Users\David\source\repos\Cotizacion\Server\CotizacionApp\Cotizacion.Core\obj\Debug\netcoreapp3.1\CotizacionApp.Core.dll
 C:\Users\David\source\repos\Cotizacion\Server\CotizacionApp\Cotizacion.Core\obj\Debug\netcoreapp3.1\CotizacionApp.Core.pdb
 C:\Users\David\source\repos\Cotizacion\Server\CotizacionApp\Cotizacion.Core\obj\Debug\netcoreapp3.1\CotizacionApp.Core.genruntimeconfig.cache
-C:\Users\David\source\repos\Cotizacion\Server\CotizacionApp\Cotizacion.Core\obj\Debug\netcoreapp3.1\CotizacionApp.Core.csprojAssemblyReference.cache
 C:\Users\David\source\repos\Cotizacion\Server\CotizacionApp\Cotizacion.Core\obj\Debug\netcoreapp3.1\CotizacionApp.Core.csproj.CoreCompileInputs.cache
